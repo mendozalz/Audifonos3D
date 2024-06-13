@@ -508,7 +508,6 @@ export default function Audifonos(props) {
   }, []);
 
   useFrame(() => {
-    console.log(scrollControl.offset * timeLine.current.duration());
     timeLine.current.seek(scrollControl.offset * timeLine.current.duration());
   });
 

@@ -3,9 +3,9 @@ import Scene from "./components/Scene";
 
 function App() {
   return (
-    <div id="app">
+    <div id="app" className="noScroll">
       <Scene />
-      <ContenidoHtml/>
+      <ContenidoHtml />
     </div>
   );
 }

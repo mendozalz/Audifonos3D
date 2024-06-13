@@ -13,12 +13,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   }
+  
   #app{
     display: grid;
     place-items: center;
     height: 100%;
     height: 100vh;
+    overflow: hidden;
 
+}
+
+.noScroll div::-webkit-scrollbar {
+  display: none;
+}
+.noScroll div{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .pages {

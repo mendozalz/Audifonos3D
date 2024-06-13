@@ -42,7 +42,7 @@ const ContenidoHtml = () => {
       <div
         id='page-5'
         className='page page--construction page--hidden'>
-        <h1 className='message'>Calidad de Construcción</h1>
+        <h1 className='message'>Construcción Robusta</h1>
         <p className='message--sub'>
           Lorem, ipsum dolor sit amet consectetur
           adipisicing elit. Similique, accusamus.
@@ -51,7 +51,7 @@ const ContenidoHtml = () => {
       <div
         id='page-6'
         className='page page--brandlogo page--hidden'>
-        <h1 className='message'>¡Consigue el tuyo!</h1>
+        <h1 className='message' style={{textAlign:"center"}}>¡Consigue el tuyo!</h1>
         <button className='comprar'>¡Comprar ahora!</button>
       </div>
     </div>
