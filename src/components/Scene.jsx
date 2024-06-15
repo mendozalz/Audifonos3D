@@ -32,7 +32,7 @@ const Scene = () => {
   return (
     <>
       <Canvas camera={{ fov: 65, position: [0, 0, 8.3] }}>
-        { showConfetti && <ExplosionConfetti/>}
+        <ExplosionConfetti/>
         <ScrollControls pages={12} damping={0.25}>
           <Audifonos />
           <Environment files={"./models/abandoned_tiled_room_1k.hdr"} />
