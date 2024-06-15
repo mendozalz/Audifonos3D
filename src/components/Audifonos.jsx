@@ -305,8 +305,12 @@ export default function Audifonos(props) {
         .step(0.00001);
     } */
 
-    const positionConstruction_X = isTablet ? 2.66242 :(isMobile ? 2.66242 : 4.4156);
-    const zoomConstruction = isTablet ? 1.21 :(isMobile ? 0.67 : 1.2517);
+    const positionConstruction_X = isTablet
+      ? 2.66242
+      : isMobile
+      ? 2.66242
+      : 4.4156;
+    const zoomConstruction = isTablet ? 1.21 : isMobile ? 0.67 : 1.2517;
     const coverRight = isMobile ? 3.33 : 4.33;
     const coverRightIn = isMobile ? 2.3 : 2.96;
     const inside1 = isMobile ? 1.3 : 1.78;
@@ -433,9 +437,17 @@ export default function Audifonos(props) {
 
     // Marca de los Audifonos Pagina #5
 
-    const positionBrandLogo_X = isTablet ? -0.20507 :(isMobile ? -0.06122 : -1.8);
-    const positionBrandLogo_Y = isTablet ? 0.23608 :(isMobile ? -0.64622 : 1.10198);
-    const zoomBrandLogo = isTablet ? 1.44 :(isMobile ? 0.89 : 1.8);
+    const positionBrandLogo_X = isTablet
+      ? -0.20507
+      : isMobile
+      ? -0.06122
+      : -1.8;
+    const positionBrandLogo_Y = isTablet
+      ? 0.23608
+      : isMobile
+      ? -0.64622
+      : 1.10198;
+    const zoomBrandLogo = isTablet ? 1.44 : isMobile ? 0.89 : 1.8;
 
     const BrandLogoAnimations = [
       // Restaurando las animaciones previas
@@ -562,16 +574,17 @@ export default function Audifonos(props) {
       },
       5
     );
-  }, [orbitControls, camera]);
+  }, []);
 
   useFrame(() => {
     const timelineProgress = scrollControl.offset * timeLine.current.duration();
     timeLine.current.seek(timelineProgress);
+    console.log(timelineProgress);
   });
 
   return (
     <>
-      <group {...props} dispose={null} ref={grupoAudifonos}>
+      <group {...props} dispose={null} ref={grupoAudifonos} >
         <mesh
           name="Cylinders"
           castShadow
@@ -700,6 +713,9 @@ export default function Audifonos(props) {
         enableZoom={false}
         ref={orbitControls}
         enableRotate={false}
+        enablePan={false}
+        touchZoom={false}
+        touchRotate={false}
       />
     </>
   );

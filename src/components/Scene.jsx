@@ -18,6 +18,7 @@ const Scene = () => {
     if(btnComprar){
       btnComprar.addEventListener('click', ()=>{
         btnComprarAhora 
+        alert('click')
       });
     }
 
