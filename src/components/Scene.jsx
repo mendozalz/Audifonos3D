@@ -16,7 +16,9 @@ const Scene = () => {
   useEffect(()=>{
     const btnComprar = document.querySelector('.comprar');
     if(btnComprar){
-      btnComprar.addEventListener('click', btnComprarAhora);
+      btnComprar.addEventListener('click', ()=>{
+        btnComprarAhora 
+      });
     }
 
     return ()=>{

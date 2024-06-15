@@ -8,6 +8,8 @@ const ContenidoHtml = () => {
         id='page-1'
         className='page page--welcome page--intro'>
         <h1 className='message'><span className='mlz'>MLZ</span> Pro One</h1>
+        <img className='footer-img' src="./LENIN_PNG.png" alt="logo mendozalz"/>
+        <img className='scroll-down' src="./scroll.gif" alt="scroll down" />
       </div>
       <div
         id='page-2'
@@ -18,6 +20,7 @@ const ContenidoHtml = () => {
           adipisicing elit. Aspernatur quae architecto
           molestiae laudantium consequuntur.
         </p>
+        <img className='footer-img' src="./LENIN_PNG.png" alt="logo mendozalz"/>
       </div>
       <div
         id='page-3'
@@ -28,6 +31,7 @@ const ContenidoHtml = () => {
           adipisicing elit. Aspernatur quae architecto
           molestiae laudantium consequuntur.
         </p>
+        <img className='footer-img' src="./LENIN_PNG.png" alt="logo mendozalz"/>
       </div>
       <div
         id='page-4'
@@ -38,6 +42,7 @@ const ContenidoHtml = () => {
           adipisicing elit. Aspernatur quae architecto
           molestiae laudantium consequuntur.
         </p>
+        <img className='footer-img' src="./LENIN_PNG.png" alt="logo mendozalz"/>
       </div>
       <div
         id='page-5'
@@ -47,12 +52,14 @@ const ContenidoHtml = () => {
           Lorem, ipsum dolor sit amet consectetur
           adipisicing elit. Similique, accusamus.
         </p>
+        <img className='footer-img' src="./LENIN_PNG.png" alt="logo mendozalz"/>
       </div>
       <div
         id='page-6'
         className='page page--brandlogo page--hidden'>
         <h1 className='message' style={{textAlign:"center"}}>¡Consigue el tuyo!</h1>
         <button className='comprar'>¡Comprar ahora!</button>
+      <img className='footer-img' src="./LENIN_PNG.png" alt="logo mendozalz"/>
       </div>
     </div>
   </div>
