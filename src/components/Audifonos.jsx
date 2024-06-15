@@ -580,7 +580,8 @@ export default function Audifonos(props) {
     const timelineProgress = scrollControl.offset * timeLine.current.duration();
     timeLine.current.seek(timelineProgress);
   });
-
+  
+  
   return (
     <>
       <group {...props} dispose={null} ref={grupoAudifonos} >
@@ -715,6 +716,8 @@ export default function Audifonos(props) {
         enablePan={false}
         touchZoom={false}
         touchRotate={false}
+        enableTouchScroll={true}
+        
       />
     </>
   );
