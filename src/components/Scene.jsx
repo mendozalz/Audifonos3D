@@ -18,7 +18,7 @@ const Scene = () => {
     if(btnComprar){
       btnComprar.addEventListener('click', ()=>{
         btnComprarAhora 
-        alert('click')
+        console.log('click')
       });
     }
 
@@ -32,11 +32,11 @@ const Scene = () => {
   return (
     <>
       <Canvas camera={{ fov: 65, position: [0, 0, 8.3] }}>
-        <ExplosionConfetti/>
         <ScrollControls pages={12} damping={0.25}>
           <Audifonos />
           <Environment files={"./models/abandoned_tiled_room_1k.hdr"} />
         </ScrollControls>
+        { showConfetti && <ExplosionConfetti/>}
       </Canvas>
     </>
   );
