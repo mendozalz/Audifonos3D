@@ -2,33 +2,26 @@ import { Environment, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect, useRef, useState } from "react";
 import Audifonos from "./Audifonos";
-import ExplosionConfetti from './Confetti'
-
+import ExplosionConfetti from "./Confetti";
 
 const Scene = () => {
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const btnComprarAhora = () =>{
+  const btnComprarAhora = () => {
     setShowConfetti(true);
-    setTimeout(()=>{setShowConfetti(false)}, 10000)
-  }
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 10000);
+  };
 
-  useEffect(()=>{
-    const btnComprar = document.querySelector('.comprar');
-    if(btnComprar){
-      btnComprar.addEventListener('click', ()=>{
-        btnComprarAhora 
-        console.log('click')
-      });
-    }
+  useEffect(() => {
+    const btnComprar = document.querySelector(".comprar");
 
-    return ()=>{
-      if(btnComprar){
-        btnComprar.addEventListener('click', btnComprarAhora);
-        console.log('click')
-      }
-    }
-  },[showConfetti]);
+    btnComprar.addEventListener("click", () => {
+      setShowConfetti(btnComprarAhora);
+      console.log("click");
+    });
+  }, []);
 
   return (
     <>
@@ -37,7 +30,7 @@ const Scene = () => {
           <Audifonos />
           <Environment files={"./models/abandoned_tiled_room_1k.hdr"} />
         </ScrollControls>
-        { showConfetti && <ExplosionConfetti/>}
+        {showConfetti && <ExplosionConfetti />}
       </Canvas>
     </>
   );
