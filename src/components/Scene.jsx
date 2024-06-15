@@ -26,7 +26,7 @@ const Scene = () => {
   return (
     <>
       <Canvas camera={{ fov: 65, position: [0, 0, 8.3] }} >
-        <ScrollControls pages={12} damping={0.25} onTouchMove={(e) => e.preventDefault()}>
+        <ScrollControls pages={12} damping={0.25} onTouchMove={(e) => e.stopPropagation()}>
             <Audifonos />
           <Environment files={"./models/abandoned_tiled_room_1k.hdr"} />
         </ScrollControls>
