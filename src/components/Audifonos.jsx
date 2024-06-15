@@ -579,7 +579,6 @@ export default function Audifonos(props) {
   useFrame(() => {
     const timelineProgress = scrollControl.offset * timeLine.current.duration();
     timeLine.current.seek(timelineProgress);
-    console.log(timelineProgress);
   });
 
   return (

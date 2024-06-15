@@ -21,7 +21,14 @@ const Scene = () => {
         console.log('click')
       });
     }
-  },[]);
+
+    return ()=>{
+      if(btnComprar){
+        btnComprar.addEventListener('click', btnComprarAhora);
+        console.log('click')
+      }
+    }
+  },[showConfetti]);
 
   return (
     <>
