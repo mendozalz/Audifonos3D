@@ -14,17 +14,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body, html {
-  overflow: auto; /* Permitir desplazamiento en el cuerpo y HTML */
-  touch-action: auto; /* Asegurar que los eventos táctiles se manejen correctamente */
-}
-
 #app {
   display: grid;
   place-items: center;
   height: 100%;
   height: 100vh;
-  overflow: auto; /* Asegurar que el contenedor pueda desplazarse */
+  
 }
 
 .noScroll div::-webkit-scrollbar {
@@ -43,7 +38,7 @@ body, html {
   top: 0;
   pointer-events: none;
   z-index: 3;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .pages_wrapper {
@@ -63,7 +58,6 @@ body, html {
   display: flex;
   flex-direction: column;
   text-align: left;
-  pointer-events: auto; /* Asegurar que los elementos dentro de la página puedan interactuar */
 }
 
 .page--hidden {
