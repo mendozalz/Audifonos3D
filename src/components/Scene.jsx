@@ -18,7 +18,7 @@ const Scene = () => {
     const btnComprar = document.querySelector(".comprar");
 
     btnComprar.addEventListener("click", () => {
-      setShowConfetti(btnComprarAhora);
+      btnComprarAhora;
       console.log("click");
     });
   }, []);
