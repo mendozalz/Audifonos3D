@@ -9,8 +9,7 @@ import ExplosionConfetti from "./Confetti";
 
 const Scene = () => {
   const [showConfetti, setShowConfetti] = useState(false);
-  const [enableTouchScroll, setEnableTouchScroll] = useState(false);
-
+  
   useEffect(() => {
     const btnComprar = document.querySelector(".comprar");
 
